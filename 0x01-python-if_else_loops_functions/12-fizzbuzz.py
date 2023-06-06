@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 def fizzbuzz():
     for i in range(1, 100):
-        if i % 3 == 0:
+        if i % 3 == 0 and i % 5 == 0:
+            n = 'FizzBuzz'
+            print("{:s}".format(n), end=' ')
+        elif i % 3 == 0:
             n = 'Fizz'
             print("{:s}".format(n), end=' ')
         elif i % 5 == 0:
@@ -9,7 +12,10 @@ def fizzbuzz():
             print("{:s}".format(n), end=' ')
         else:
             print("{:d}".format(i), end=' ')
-    if (i + 1) % 3 == 0:
+    if (i +1) % 3 == 0 and (i + 1) % 5 == 0:
+        n = 'FizzBuzz'
+        print("{:s}".format(n))
+    elif (i + 1) % 3 == 0:
         n = 'Fizz'
         print("{:s}".format(n))
     elif (i + 1) % 5 == 0:
