@@ -8,4 +8,4 @@ elif n == 0:
     check = 'and is 0'
 elif n <= 5 and n != 0:
     check = 'and is less than 6 and not 0'
-print(f"Last digit of {number:d} is {n:d} {check}")
+print(f"Last digit of {number} is {n} {check}")
