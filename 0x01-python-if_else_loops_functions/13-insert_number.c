@@ -40,6 +40,13 @@ listint_t *insert_node(listint_t **head, int number)
 		{
 			temp->next = new;
 			new->next = min;
+			return (new);
+		}
+		if (number > max->n)
+		{
+			max->next = new;
+			new->next = NULL;
+			return (new);
 		}
 
 		min = min->next;
