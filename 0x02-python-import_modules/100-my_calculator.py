@@ -24,4 +24,4 @@ if __name__ == '__main__':
                 if args[1] == op:
                     print("{:d} {:s} {:d} = {:d}"
                           .format(int(args[0]), args[1], int(args[2]),
-                                  cb(int(args[0]), int(args[2]))))
+                                    cb(int(args[0]), int(args[2]))))
