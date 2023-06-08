@@ -16,7 +16,7 @@ if __name__ == '__main__':
         print("Usage: {:s} <a> <operator> <b>".format(sys.argv[0]))
         sys.exit(1)
     elif len(args) == 3:
-        if check_operator(args[1]) == False:
+        if check_operator(args[1]) is False:
             print("Unknown operator. Available operators: +, -, * and /")
             sys.exit(1)
         else:
@@ -24,5 +24,4 @@ if __name__ == '__main__':
                 if args[1] == op:
                     print("{:d} {:s} {:d} = {:d}"
                           .format(int(args[0]), args[1], int(args[2]),
-                           cb(int(args[0]), int(args[2]))))
-
+                                  cb(int(args[0]), int(args[2]))))
