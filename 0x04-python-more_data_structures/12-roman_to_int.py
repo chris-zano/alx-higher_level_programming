@@ -12,8 +12,7 @@ def roman_to_int(roman_string):
             return (0)
         if (i != (len(a) - 1) and
                 roman_dict[a[i]] < roman_dict[a[i + 1]]):
-                num += roman_dict[a[i]] * -1
+            num += roman_dict[a[i]] * -1
         else:
             num += roman_dict[a[i]]
     return (num)
-
