@@ -4,12 +4,9 @@ def roman_to_int(roman_string):
     roman_numbers = {'I': 1, 'V': 5, 'X': 10, 'L': 50,
                      'C': 100, 'D': 500, 'M': 1000}
     number = 0
-    prev = 0
-    for sym in reversed(a):
-        val = roman_numbers.get(sym, 0)
-        if val < prev:
-            number -= val
+    for i in range(len(a)):
+        if i + 1 < len(a) and roman_numbers[a[i]] < roman_numbers[a[i + 1]]:
+            number -= roman_numbers[a[i]]
         else:
-            number += val
-        prev = val
+            number += roman_numbers[a[i]]
     return number
