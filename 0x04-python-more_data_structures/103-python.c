@@ -3,6 +3,7 @@
 /**
  * print_python_list - Prints information about a Python list object.
  * @p: Pointer to the Python list object.
+ * Return: void
  */
 
 void print_python_list(PyObject *p)
@@ -26,6 +27,7 @@ void print_python_list(PyObject *p)
 /**
  * print_python_bytes - Prints information about a Python bytes object.
  * @p: Pointer to the Python bytes object.
+ * Return: void
  */
 
 void print_python_bytes(PyObject *p)
