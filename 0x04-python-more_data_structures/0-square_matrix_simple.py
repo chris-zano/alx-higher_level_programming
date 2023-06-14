@@ -1,6 +1,7 @@
 #!/usr/bin/python
+import sys
 def square_matrix_simple(matrix=[]):
-    a = martix[:]
+    a = matrix[:]
     squared_list = []
     for elmt in a:
         sublist = []
