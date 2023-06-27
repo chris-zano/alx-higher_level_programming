@@ -17,22 +17,22 @@ class Square:
             position: coordinates of the square
         """
 
-        if not isinstance(value, int):
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
 
-        if value < 0:
+        if size < 0:
             raise ValueError("size must be >= 0")
 
-        if not isinstance(value, tuple):
+        if not isinstance(position, tuple):
             raise TypeError("position must be a tuple of 2 positive integers")
 
-        if len(value) != 2:
+        if len(position) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
 
-        if not (isinstance(value[0], int) and isinstance(value[1], int)):
+        if not (isinstance(position[0], int) and isinstance(position[1], int)):
             raise TypeError("position must be a tuple of 2 positive integers")
 
-        if not (value[0] >= 0 and value[1] >= 0):
+        if not (position[0] >= 0 and position[1] >= 0):
             raise TypeError("position must be a tuple of 2 positive integers")
 
         self.__size = size
