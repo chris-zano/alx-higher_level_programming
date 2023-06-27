@@ -56,7 +56,7 @@ class Square:
         """
         position setter to set the coordinates of a square
         Args:
-            value: coordinates to set for the square
+            value: new coordinates for the square
         """
 
         if not isinstance(value, tuple):
