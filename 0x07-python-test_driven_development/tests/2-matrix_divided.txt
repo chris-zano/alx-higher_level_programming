@@ -1,0 +1,62 @@
+The ``matrix_divided`` module
+=============================
+
+Using ``matrix_divided``
+------------------------
+
+Importing function from module:
+	>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+
+Checking for module docString:
+	>>> m = __import__("2-matrix_divided").__doc__
+	>>> len(m) > 1
+	True
+
+Checking for function docString:
+	>>> f = __import__("2-matrix_divided").matrix_divided.__doc__
+	>>> len(f) > 1
+	True
+
+Checking for matrix of list of lists with equal row lengths:
+	>>> matrix = [[3,6,9], [12,15,18]]
+	>>> matrix_divided(matrix, 3)
+	[[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+Checking for matrix of list, not list of lists:
+	>>> matrix = [1, 2, 3, 4, 5, 6]
+	>>> matrix_divided(matrix, 3)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking for matrix of list of lists of unequal rows:
+	>>> matrix = [[3,6], [9, 12,15]]
+	>>> matrix_divided(matrix, 3)
+	Traceback (most recent call last):
+	TypeError: Each row of the matrix must have the same size
+
+Checking for martix of list of lists of integers or floats:
+	>>> matrix = [[0.7, 1.4, 2.09], [2.8, 3.49, 4.19]]
+	>>> matrix_divided(matrix, 2.5)
+	[[0.28, 0.56, 0.84], [1.12, 1.4, 1.68]]
+
+Checking for matrix of list of lists of integers:
+	>>> matrix = [[3, 6, 9], [12, 15, 18]]
+	>>> matrix_divided(matrix, 4.3)
+	[[0.7, 1.4, 2.09], [2.79, 3.49, 4.19]]
+
+Checking for matrix of list of lists of integers:
+        >>> matrix = [[5, 13, 15], [26, 508, 318]]
+        >>> matrix_divided(matrix, 10)
+	[[0.5, 1.3, 1.5], [2.6, 50.8, 31.8]]
+
+Checking for non integer or float types
+	>>> matrix = [["3", None, True], [1.2, [1, 2, 4], {2, 5}]]
+	>>> matrix_divided(matrix, 10)
+	Traceback (most recent call last):
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking for zero division error:
+	>>> matrix = [[3, 6, 9], [12, 15, 18]]
+	>>> matrix_divided(matrix, 0)
+	Traceback (most recent call last):
+	ZeroDivisionError: division by zero
