@@ -1,0 +1,61 @@
+The ```add_integer``` module
+======================
+
+Using ```add_integer```
+-----------------------
+
+Importing the function from the module:
+    >>> add_integer = __import__("add_integer").add_integer
+
+Checking for module docstrings:
+    >>> m = __import__("add_integer").__doc__
+    >>> len(m) > 1
+    True
+
+Checking for function docstrings:
+    >>> f = __import__("add_integer").add_integer.__doc__
+    >>> len(f) > 1
+    True
+
+Checking for two positive numbers:
+    >>> add_integer(2, 3)
+    5
+
+Checking for one positive number:
+    >>> add_integer(5)
+    103
+
+Checking for two negative numbers:
+    >>> add_integer(-4, -10)
+    -14
+
+Checking for one negative number:
+    >>> add_integer(-100)
+    -2
+
+Checking for list of tuples:
+    >>> tupList = [{2, 3}, {10, -21}, {-5, 0}, {1000, -465}]
+    >>> [add_integer(x, y for x, y in tupList)]
+    [5, -11, -5, 535]
+
+Checking for large numbers:
+    >>> add_integer(1000000000)
+    1000000098
+
+Checking for incorrect input type:
+    >>> add_integer("3", 24)
+    Traceback (most recent call last)
+        ...
+    TypeError: a must be an integer
+
+Checking for incorrect input single:
+    >>> add_integer("10")
+    Traceback (most recent call last)
+        ...
+    TypeError: a must be an integer
+
+Checking for incorrect input, int b:
+    >>> add_integer(10, "15")
+    Traceback (most recent call last)
+        ...
+    TypeError: b must be an integer
