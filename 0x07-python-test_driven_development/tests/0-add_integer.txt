@@ -1,61 +1,98 @@
-The ```add_integer``` module
-======================
+The ``add_integer`` module
+==========================
 
-Using ```add_integer```
------------------------
+Using ``add_integer``
+---------------------
 
 Importing the function from the module:
-    >>> add_integer = __import__("add_integer").add_integer
+	>>> add_integer = __import__("0-add_integer").add_integer
 
-Checking for module docstrings:
-    >>> m = __import__("add_integer").__doc__
-    >>> len(m) > 1
-    True
+Checking for mosule docstring:
+	>>> m = __import__("0-add_integer").__doc__
+	>>> len(m) > 1
+	True
 
-Checking for function docstrings:
-    >>> f = __import__("add_integer").add_integer.__doc__
-    >>> len(f) > 1
-    True
+Checking for function docstring:
+	>>> f = __import__("0-add_integer").add_integer.__doc__
+	>>> len(f) > 1
+	True
 
-Checking for two positive numbers:
-    >>> add_integer(2, 3)
-    5
+Passing two positive integers:
+	>>> add_integer(2, 3)
+	5
 
-Checking for one positive number:
-    >>> add_integer(5)
-    103
+Passing only a to the function:
+	>>> add_integer(1)
+	99
 
-Checking for two negative numbers:
-    >>> add_integer(-4, -10)
-    -14
+Passing two negative numbers:
+	>>> add_integer(-2, -3)
+	-5
 
-Checking for one negative number:
-    >>> add_integer(-100)
-    -2
+Passing one negative number and one positive number:
+	>>> add_integer(-2, 3)
+	1
 
-Checking for list of tuples:
-    >>> tupList = [{2, 3}, {10, -21}, {-5, 0}, {1000, -465}]
-    >>> [add_integer(x, y for x, y in tupList)]
-    [5, -11, -5, 535]
+Passing one negative number:
+	>>> add_integer(-8)
+	90
 
-Checking for large numbers:
-    >>> add_integer(1000000000)
-    1000000098
+Passing two positive floats:
+	>>> add_integer(2.3, 3.2)
+	5
 
-Checking for incorrect input type:
-    >>> add_integer("3", 24)
-    Traceback (most recent call last)
-        ...
-    TypeError: a must be an integer
+Passing two negative floats:
+	>>> add_integer(-10.3, -11.6)
+	-21
 
-Checking for incorrect input single:
-    >>> add_integer("10")
-    Traceback (most recent call last)
-        ...
-    TypeError: a must be an integer
+Passing one positive and one negative:
+	>>> add_integer(10.3 , -11.6)
+	-1
 
-Checking for incorrect input, int b:
-    >>> add_integer(10, "15")
-    Traceback (most recent call last)
-        ...
-    TypeError: b must be an integer
+Passing one positive float:
+	>>> add_integer(2.8)
+	100
+
+Passing one negative float:
+	>>> add_integer(-8.9)
+	90
+
+Testing for non numbers
+=======================
+
+passing a string and integer into the function:
+	>>> add_integer("3", 10)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+passing two strings:
+	>>> add_integer("3", "3.4")
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+passing an int and a float:
+	>>> add_integer(23, float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
+passing infinity to the function will result in overflow error:
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+passing a None:
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+passing a boolean:
+	>>> add_integer(False)
+	98
+
+passing a boolean:
+	>>> add_integer(True)
+	99
+
+passing two boolean:
+	>>> add_integer(True, False)
+	1
