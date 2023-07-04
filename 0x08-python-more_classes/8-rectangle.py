@@ -25,7 +25,6 @@ class Rectangle:
             return rect_1
         return rect_2
 
-
     def __init__(self, width=0, height=0):
         """
         this method initialises the class Rectangle object when called.
@@ -63,7 +62,6 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
 
         return
-
 
     @property
     def width(self):
@@ -126,7 +124,6 @@ class Rectangle:
             return 0
         return ((2 * self.__width) + (2 * self.__height))
 
-    
     def __str__(self):
         """returns printable string representation of the rectangle"""
         string = ""
@@ -134,7 +131,6 @@ class Rectangle:
             string += "\n".join(str(self.print_symbol) * self.__width
                                 for j in range(self.__height))
         return string
-
 
     def __repr__(self):
         """returns a string representation of the rectangle for reproduction"""

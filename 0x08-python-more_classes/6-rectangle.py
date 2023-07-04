@@ -51,7 +51,6 @@ class Rectangle:
 
         return
 
-
     @property
     def width(self):
         """

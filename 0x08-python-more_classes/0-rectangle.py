@@ -8,6 +8,6 @@ This module provides one class
 class Rectangle:
     """
     this is the rectangle class
-    the rectangle class does nothing 
+    the rectangle class does nothing
     """
     pass

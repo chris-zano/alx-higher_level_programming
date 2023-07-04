@@ -10,7 +10,7 @@ class Rectangle:
     this is the rectangle class
     This class defines a rectangle
     """
-    
+
     def __init__(self, width=0, height=0):
         """
         this method initialises the class Rectangle object when called.
@@ -46,7 +46,6 @@ class Rectangle:
         print("Bye rectangle...")
 
         return
-
 
     @property
     def width(self):
