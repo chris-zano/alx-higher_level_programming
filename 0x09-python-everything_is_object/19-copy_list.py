@@ -1,3 +1,3 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 def copy_list(l):
-    return l.copy()
+    return list(map((lambda x: x), l))
