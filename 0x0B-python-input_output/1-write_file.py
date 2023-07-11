@@ -21,4 +21,3 @@ def write_file(filename="", text=""):
         with open(filename, "w", encoding="utf-8") as f:
             written_bytes = f.write(text)
     return written_bytes
-
