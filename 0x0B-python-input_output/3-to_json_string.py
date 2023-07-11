@@ -14,6 +14,5 @@ def to_json_string(my_obj):
         json string of my_obj
     """
 
-    if my_obj:
-        import json
-        return json.dumps(my_obj)
+    import json
+    return json.dumps(my_obj)
