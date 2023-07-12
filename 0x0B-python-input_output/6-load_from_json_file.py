@@ -7,7 +7,7 @@ This module provides only one function
 
 def load_from_json_file(filename):
     """
-    This function an object from a json file filename
+    This function creates an object from a json file filename
     Args:
         filename (str): JSON file
     Returns:
