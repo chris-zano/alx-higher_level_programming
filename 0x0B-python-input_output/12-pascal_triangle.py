@@ -4,26 +4,15 @@ This is the 12-pascal_triangle Module
 """
 
 
-def fact(i):
-    """
-    Returns the factorial of a given integer i.e. i!
-    """
-    if i == 0:
-        return 1
-    return i * fact(i - 1)
+if n <= 0:
+        return []
 
-
-def comb(n, r):
-    """
-    Returns the result of nCr
-    """
-    return fact(n) / (fact(r) * fact(n - r))
-
-
-def pascal_triangle(n):
-    """
-    Returns a list of lists of integers representing
-    the Pascal’s triangle of n
-    """
-    return [[int(comb(x, i)) for i in range(x + 1)] for x in range(n)]
-
+    triangles = [[1]]
+    while len(triangles) != n:
+        tri = triangles[-1]
+        tmp = [1]
+        for i in range(len(tri) - 1):
+            tmp.append(tri[i] + tri[i + 1])
+        tmp.append(1)
+        triangles.append(tmp)
+    return triangles
