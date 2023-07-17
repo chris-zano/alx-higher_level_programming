@@ -1,11 +1,9 @@
 # 0x0C. Python - Almost a circle
 
 ## ___Background Context___
-
 * The AirBnB project is a big part of the Higher level curriculum. This project will help you be ready for it.
 
-## *** In this project, you will review everything about Python: ***
-
+## In this project, you will review everything about Python:
 * Import
 * Exceptions
 * Class
@@ -17,8 +15,7 @@
 * Unittest
 * Read/Write file
 
-## ___You will also learn about: ___
-
+## You will also learn about:
 * args and kwargs
 * Serialization/Deserialization
 * JSON
