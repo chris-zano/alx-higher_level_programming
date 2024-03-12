@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+chmod u+x *.js
+
+semistandard *.js
+
+semistandard --fix
+
+semistandard *.js
+
+git add .; git commit -m "submission of tasks"; git push
