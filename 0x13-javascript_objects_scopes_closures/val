@@ -17,7 +17,6 @@ if [ $? -eq 0 ]; then
     # If no errors or warnings, add changes to git and push
     git add .
     git commit -m "submission of tasks"
-    git push
     echo "Checks passed"
 else
     # If errors or warnings exist, display a message indicating the failure
