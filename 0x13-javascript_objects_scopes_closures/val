@@ -1,11 +1,26 @@
 #!/usr/bin/bash
 
+# Make JavaScript files executable
 chmod u+x *.js
 
+# Perform linting with semistandard
 semistandard *.js
 
+# Automatically fix linting errors
 semistandard --fix
 
+# Perform linting again to ensure fixes were applied
 semistandard *.js
 
-git add .; git commit -m "submission of tasks"; git push
+# Check if the linting process produced any errors or warnings
+if [ $? -eq 0 ]; then
+    # If no errors or warnings, add changes to git and push
+    git add .
+    git commit -m "submission of tasks"
+    git push
+    echo "Checks passed"
+else
+    # If errors or warnings exist, display a message indicating the failure
+    echo "Linting checks failed. Please review the errors or warnings."
+fi
+
